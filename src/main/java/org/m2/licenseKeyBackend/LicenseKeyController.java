@@ -2,6 +2,8 @@ package org.m2.licenseKeyBackend;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.security.NoSuchAlgorithmException;
+
 @RestController
 public class LicenseKeyController {
 
@@ -17,15 +19,16 @@ public class LicenseKeyController {
     }
 
     @GetMapping("/newlicensekey")
-    String generateLicenseKeyRequest(){
-        return "fakeLicenseKey";
+    String generateLicenseKeyRequest() throws NoSuchAlgorithmException {
+        String licenseKey = LicenseKeyGenerator.getInstance().getLicenseKey("TestUser@test.com");
+        return  "{\"licenseKey\":" + licenseKey + "}";
     }
 
 
     @PostMapping("/validate")
-    boolean licenseKeyValidationRequest (@RequestBody LicenseKey licenseKey){
-        System.out.println(licenseKey.getLicenseKey());
-        if(licenseKey.getLicenseKey() == "TestKey"){
+    boolean licenseKeyValidationRequest (@RequestBody LicenseKey licenseKey) throws NoSuchAlgorithmException {
+        String supposedLicenseKey = LicenseKeyGenerator.getInstance().getLicenseKey(licenseKey.getEmailAdress());
+        if(licenseKey.getLicenseKey().equals(supposedLicenseKey)){
             return true;
         }
         else {
