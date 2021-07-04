@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/stylesheet.css}">
+    <title>License Key Website</title>
+</head>
+<body>
+<form method="POST" action="/validate">
+    <input type="text" id="emailAdress" name="emailAddress"/>
+    <input type="text" id="licenseKey" name="licenseKey"/>
+    <button type="submit">Validate Key</button>
+</form>
+<form method="POST" action="/newlicensekey">
+    <input type="text" id="emailAdressNewKey" name="emailAddress"/>
+    <button type="submit">Get License Key</button>
+</form>
+</body>
+</html>

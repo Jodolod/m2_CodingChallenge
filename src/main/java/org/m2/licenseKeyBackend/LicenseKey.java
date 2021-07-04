@@ -1,11 +1,11 @@
 package org.m2.licenseKeyBackend;
 
 public class LicenseKey {
-    private String emailAdress;
+    private String emailAddress;
     private String licenseKey;
 
     public String getEmailAdress(){
-        return emailAdress;
+        return emailAddress;
     }
 
     public String getLicenseKey(){
