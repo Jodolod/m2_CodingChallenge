@@ -3,3 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    margin: auto;
+    background-color: coral;
+}
+
+#page {
+    background-color: white;
+    margin : auto;
+    height: 50vh;
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+
+.inputforms {
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form {
+    padding-top:20px;
+    padding-bottom:10px;
+}

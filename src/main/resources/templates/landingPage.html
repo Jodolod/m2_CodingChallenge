@@ -7,14 +7,21 @@
     <title>License Key Website</title>
 </head>
 <body>
-<form method="POST" action="/validate">
-    <input type="text" id="emailAdress" name="emailAddress"/>
-    <input type="text" id="licenseKey" name="licenseKey"/>
-    <button type="submit">Validate Key</button>
-</form>
-<form method="POST" action="/newlicensekey">
-    <input type="text" id="emailAdressNewKey" name="emailAddress"/>
-    <button type="submit">Get License Key</button>
-</form>
+    <div id ="page">
+        <h2>m2 coding challenge license key</h2>
+        <div class = "inputforms" id ="inputformsID">
+            <p>Please enter the email address used for registering the license key to validate it</p>
+            <form method="POST" action="/validate">
+                <input type="text" id="emailAdress" name="emailAddress"/>
+                <input type="text" id="licenseKey" name="licenseKey"/>
+                <button type="submit">Validate Key</button>
+            </form>
+            <p>Please enter a valid email address to receive a corresponding  license key</p>
+            <form method="POST" action="/newlicensekey">
+                <input type="text" id="emailAdressNewKey" name="emailAddress"/>
+                <button type="submit">Get License Key</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
