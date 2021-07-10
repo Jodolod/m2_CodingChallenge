@@ -13,21 +13,15 @@ public class LicenseKeyService {
         String licenseKeyString = LicenseKeyGenerator.getInstance().getLicenseKey(emailAddress);
         LicenseKey licenseKey = new LicenseKey(licenseKeyString, emailAddress);
         if(licenseKeyRepository.existsById(licenseKey.getLicenseKey())){
-            return new LicenseKey("Key already exists", null);
+            return new LicenseKey("This email address was already used to obtain a license key ", null);
         }
         licenseKeyRepository.save(licenseKey);
         return  licenseKey;
     }
 
 
-    public LicenseKey getLicenseKey(String emailAddress){
-        return licenseKeyRepository.findById(LicenseKeyGenerator.getInstance().getLicenseKey(emailAddress)).get();
-    }
-
-
-    public boolean validateLicenseKey(String emailAddress, String licenseKey){
-        String supposedLicenseKey = LicenseKeyGenerator.getInstance().getLicenseKey(emailAddress);
-        if(licenseKey.equals(supposedLicenseKey)){
+    public boolean validateLicenseKey(String licenseKey){
+        if(licenseKeyRepository.existsById(licenseKey)){
             return true;
         }
         else {
