@@ -9,7 +9,6 @@ import javax.persistence.Table;
  * There are not setters because all interactions with the data of this class should be through the database
  */
 @Entity
-
 public class LicenseKey {
 
 

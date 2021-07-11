@@ -1,0 +1,3 @@
+2021-07-11 14:16:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LICENSE_KEY" not found; SQL statement:
+select count(*) as col_0_0_ from license_key licensekey0_ where licensekey0_.licensekey=? [42102-200]
