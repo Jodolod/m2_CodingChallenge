@@ -28,4 +28,14 @@ public class LicenseKeyService {
             return false;
         }
     }
+
+    public boolean deleteLicenseKey(String licenseKey){
+        if(licenseKeyRepository.existsById(licenseKey)){
+            licenseKeyRepository.deleteById(licenseKey);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }

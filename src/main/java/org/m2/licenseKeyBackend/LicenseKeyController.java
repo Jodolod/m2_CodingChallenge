@@ -19,7 +19,6 @@ public class LicenseKeyController {
         return  licenseKeyService.getNewLicenseKey(emailAddress).getLicenseKey();
     }
 
-
     @PostMapping("/validate")
     boolean licenseKeyValidationRequest (@RequestParam String emailAddress, String licenseKey) {
         return licenseKeyService.validateLicenseKey(licenseKey);

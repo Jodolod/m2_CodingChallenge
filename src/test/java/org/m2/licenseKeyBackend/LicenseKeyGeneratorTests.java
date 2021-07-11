@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.*;
 
-public class LicenseKeyGeneratorTest {
+public class LicenseKeyGeneratorTests {
     private LicenseKeyGenerator licenseKeyGenerator;
     private String userNameAsTestValue = null;
 
