@@ -10,15 +10,14 @@
     <div id ="page">
         <h2>m2 coding challenge license key</h2>
         <div class = "inputforms" id ="inputformsID">
-            <p>Please enter the email address used for registering the license key to validate it</p>
+            <p>Please enter a license key to validate it</p>
             <form method="POST" action="/validate">
-                <input type="text" id="emailAdress" name="emailAddress"/>
-                <input type="text" id="licenseKey" name="licenseKey"/>
+                <input type="text" id="licenseKey" name="licenseKey" placeholder="License Key"/>
                 <button type="submit">Validate Key</button>
             </form>
             <p>Please enter a valid email address to receive a corresponding  license key</p>
             <form method="POST" action="/newlicensekey">
-                <input type="text" id="emailAdressNewKey" name="emailAddress"/>
+                <input type="text" id="emailAdressNewKey" name="emailAddress" placeholder="Amail Address"/>
                 <button type="submit">Get License Key</button>
             </form>
         </div>
