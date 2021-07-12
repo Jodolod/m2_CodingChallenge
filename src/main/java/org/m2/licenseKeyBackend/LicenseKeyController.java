@@ -20,7 +20,7 @@ public class LicenseKeyController {
     }
 
     @PostMapping("/validate")
-    boolean licenseKeyValidationRequest (@RequestParam String emailAddress, String licenseKey) {
+    boolean licenseKeyValidationRequest (@RequestParam String licenseKey) {
         return licenseKeyService.validateLicenseKey(licenseKey);
     }
 }
